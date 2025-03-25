@@ -13,14 +13,15 @@ jobs:
             - name: Install cowsay
               run: sudo apt update && sudo apt install cowsay -y
 
-            - name: Execute Cowsay CMD
-              run: cowsay "RUN for COVER, I am a DRAGON....RAWR" >> dragon.txt
+            - name: Execute Shell Script
+              run: ./ascii-script.sh
+            #   run: cowsay "RUN for COVER, I am a DRAGON....RAWR" >> dragon.txt
              
-            - name: Test file exists
-              run: grep -i "dragon" dragon.txt
+            # - name: Test file exists
+            #   run: grep -i "dragon" dragon.txt
             
-            - name: Read file
-              run: cat dragon.txt
+            # - name: Read file
+            #   run: cat dragon.txt
             
             - name: List repo file
               run: ls -ltra
