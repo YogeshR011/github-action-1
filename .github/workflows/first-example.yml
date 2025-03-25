@@ -15,6 +15,6 @@ jobs:
                 ls -ltra
                 cat README.md
 
-          - name: Generate ASCII Artwork
-            run: cowsay -f dargon "RUN for COVER, I am a DRAGON....RAWR" >> dargon.txt
+          # - name: Generate ASCII Artwork
+          #   run: cowsay -f dargon "RUN for COVER, I am a DRAGON....RAWR" >> dargon.txt
           
