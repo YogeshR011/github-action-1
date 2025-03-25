@@ -12,9 +12,13 @@ jobs:
             
             # - name: Install cowsay
             #   run: sudo apt update && sudo apt install cowsay -y
+            - name: List repo file
+              run: ls -ltra
 
             - name: Execute Shell Script
-              run: ./ascii-script.sh
+              run: |
+               chmod 700 ascii-script.sh 
+               ./ascii-script.sh
             #   run: cowsay "RUN for COVER, I am a DRAGON....RAWR" >> dragon.txt
              
             # - name: Test file exists
@@ -22,6 +26,7 @@ jobs:
             
             # - name: Read file
             #   run: cat dragon.txt
-            
             - name: List repo file
               run: ls -ltra
+            
+        
