@@ -10,8 +10,8 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v4
             
-            - name: Install cowsay
-              run: sudo apt update && sudo apt install cowsay -y
+            # - name: Install cowsay
+            #   run: sudo apt update && sudo apt install cowsay -y
 
             - name: Execute Shell Script
               run: ./ascii-script.sh
