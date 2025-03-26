@@ -7,19 +7,23 @@ on:
 
 jobs:
     deploy-on-ubuntu:
-        runs-on: uubuntu-latest
+        strategy:
+          matrix:
+            os: [ubuntu-latest,windows-latest]
+            images: [hello-world,alpine]
+        runs-on: ${{ matrix.os }}
         steps:
             - name: Echo Docker Details
               run: docker info
             
-            - name: Run Image
-              run: docker run hello-world
+            - name: Run Image on ${{ matrix.os }}
+              run: docker run ${{ matrix.images }}
             
-    deploy-on-windows:
-        runs-on: windows-latest
-        steps:
-            - name: Echo Docker Details
-              run: docker info
+    # deploy-on-windows:
+    #     runs-on: windows-latest
+    #     steps:
+    #         - name: Echo Docker Details
+    #           run: docker info
           
-            - name: Run Image
-              run: docker run hello-world
+    #         - name: Run Image
+    #           run: docker run hello-world
