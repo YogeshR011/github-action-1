@@ -8,4 +8,4 @@ We will be learning GitHub Actions,
 - automate your software development workflows
 - enhancing productivity and code quality
 
-We made some changes in README
+We made some more changes in README
